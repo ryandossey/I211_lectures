@@ -3,9 +3,9 @@
 {% block content %}
     <h1>Dino-Site!</h1>
     {% for dino in dinosaurs %}
-    <h2>{{dinosaurs[dino]['name'}}</h2>
+    <h2>{{ dinosaurs[dino]['name'] }}</h2>
     <figure>
-        <img src="{{url_for('static', filename='images/' + dinosaurs[dino]['image])}}" alt="{{dino}}">
+        <img src="{{ url_for('static', filename='images/' + dinosaurs[dino]['image']) }}" alt="{{dino}}">
         <figcaption>{{dinosaurs[dino]['image-credit']}}</figcaption>
     </figure>
     {% endfor %} 
