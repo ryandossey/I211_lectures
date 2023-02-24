@@ -1,0 +1,12 @@
+{% extends "faq.html" %}
+{% block title %}FAQ{% endblock %}
+{% block content %}
+    <h1>FAQ</h1>
+    {% for i in faq_list %}
+        <details>
+            <summary>{{i[0]}}</summary>
+            <p>{{i[1]}}</p>
+        </details>
+
+    {% endfor %}
+    {% endblock %}
